@@ -23,6 +23,7 @@ rrdd_plugin.cmxa: rrdp_common.cmx
 .PHONY: install
 install: build
 	ocamlfind install rrdd-plugin META \
+		rrdd_plugin.a \
 		rrdp_common.cmi \
 		rrdp_common.cmx \
 		$(if $(BYTE_ENABLED), rrdd_plugin.cma) \
