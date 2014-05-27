@@ -5,9 +5,6 @@ PACKAGES=-package threads -package stdext -package rrd-client
 .PHONY: build
 build: rrdd_plugin.cma rrdd_plugin.cmxa
 
-$(TARGETS):
-	omake $@
-
 %.cmo: %.ml
 	ocamlfind ocamlc -thread $(PACKAGES) -c $<
 
