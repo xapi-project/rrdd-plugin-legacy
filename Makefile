@@ -1,5 +1,3 @@
-NATIVE_ENABLED=true
-
 PACKAGES=-package threads -package stdext -package rrd-client
 
 .PHONY: build
@@ -23,8 +21,8 @@ install: build
 		rrdd_plugin.a \
 		rrdp_common.cmi \
 		rrdp_common.cmx \
-		$(if $(BYTE_ENABLED), rrdd_plugin.cma) \
-		$(if $(NATIVE_ENABLED), rrdd_plugin.cmxa) \
+		rrdd_plugin.cma \
+		rrdd_plugin.cmxa\
 
 .PHONY: uninstall
 uninstall:
